@@ -2,9 +2,33 @@ window.addEventListener("DOMContentLoaded", domLoaded);
 
 // When the DOM has finished loading, add the event listeners.
 function domLoaded() {
+   F_in.addEventListener("input",()=>{
+      C_in.value="";
+   })
+   C_in.addEventListener("input",()=>{
+      F_in.value="";
+   })
+   convertButton.addEventListener("click",(p)=>{
+      p.preventDefault();
+
+      if(F_in.value !== ''){
+         const F = parseFloat(F_in.value);
+         const C = convertFtoC(F);
+         C_in.value = C; 
+
+         displayIcon(F);
+      }
+      
+      else if (C_in.value !== '') {
+         const C = parseFloat(C_in.value);
+         const F = convertCtoF(C);
+         F_in.value = F; 
+
+         displayIcon(F);  
+     }
+ })
    // TODO: Use addEventListener() to register a click event handler for the convert button.
    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#add_a_simple_listener
-
    // Add event listeners to handle clearing the box that WAS NOT clicked,
    // e.g., the element C_in listens for 'input', with a callback fn to
    // execute after that event does happen. 
@@ -19,15 +43,36 @@ function domLoaded() {
 // TODO: (Part of the above is to write the functions to be executed when the event handlers are invoked.)
 
 function convertCtoF(C) {
-   // TODO: Return temp in °F. 
-   // °F = °C * 9/5 + 32
+   const F = C * 9/5 + 32;
+   return F;
 }
 
 function convertFtoC(F) {
-   // TODO: Return temp in °C. 
-   // °C = (°F - 32) * 5/9
+   const C = (F - 32) * 5/9
+   return C;
 }
 
+function displayIcon(F){
+   //alert("Gets here");
+   if(F>=200 || F<=-200){
+      //TODO Display DEAD
+      //alert("Gets here");
+      document.getElementById("weatherIcon").src="./images/dead.png";
+   }
+   else if(F<=32){
+      //TODO Display COLD
+      document.getElementById("weatherIcon").src="./images/cold.png";
+   }
+   else if(F>=90){
+      //TODO Display HOT
+      document.getElementById("weatherIcon").src="./images/hot.png";
+   }
+   else if(F>32 && F<90){
+      //TODO Display COOL
+      document.getElementById("weatherIcon").src="./images/cool.png";
+
+   }
+}
 // TODO: write a fn that can be called with every temp conversion
 // to display the correct weather icon.
 // Based on degrees Fahrenheit:
