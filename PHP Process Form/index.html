@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <div id = "header_background">
+      <p class = "header">Welcome to My Page</p>
+    </div>
+
+    <title>CS Questionnaire Form</title>
+    <link rel="icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <h1>Computer Science Questionnaire</h1>
+    <form action="retrieve_data.php" method="POST">
+    <div class = "diff">
+      <!Checkbox>
+      <label for="checkbox">Enter what classes you are enrolled in:</label><br>
+      <input type="checkbox" name="current_courses[]" value="CSCI 466">CSCI 466<br>
+      <input type="checkbox" name="current_courses[]" value="CSCI 433">CSCI 433<br>
+      <input type="checkbox" name="current_courses[]" value="CSCI 440">CSCI 440<br>
+      <input type="checkbox" name="current_courses[]" value="CSCI 481">CSCI 481<br>
+
+      <br>
+      <!radio>
+      <label for="fav_language">Enter what your favourite coding languages are:</label><br>
+        <input type="radio" id="html" name="fav_language" value="HTML/CSS">
+        <label for="html">HTML/CSS</label><br>
+        <input type="radio" id="css" name="fav_language" value="Python" >
+        <label for="css">Python</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">Java</label><br>
+        <input type="radio" id="css" name="fav_language" value="C/C++">
+        <label for="css">C/C++</label><br>
+      </div>  
+      <br>
+      <div class = "diff">
+      <label for="subjectline">Enter what year of college you are currently enrolled in:</label>
+      <br>
+      <select id="sl" name="year-attending">
+        <option value="Select-One" style="text-align: left;">-Select-One-</option>
+        <option value="Freshman" style="text-align: left;">Freshman</option>
+        <option value="Sophmore" style="text-align: left;">Sophmore</option>
+        <option value="Junior" style="text-align: left;">Junior</option>
+        <option value="Senior" style="text-align: left;">Senior</option>
+      </select> 
+      <br>
+      
+      <br>
+      <label for="select-box">What other courses would you like to see offered:</label>
+      <div class="select" ><select name="alt-courses[]" id="select-box" style="width: 40em;" multiple>
+        <option value="Hacking">Hacking Courses</option>
+        <option value="AI">AI Development Courses</option>
+        <option value="Hands-On">Hands-On Troubleshooting Courses</option>
+        <option value="Data">Data Backup Courses</option>
+        <option value="Network">Network Establishment Courses</option>
+      </select>
+      </div>
+    </div>
+    <div>
+      <input type="submit" name="submitbtn" id="sb" value="Submit Questionnaire" style="height: 50px; font-weight: bolder; color: black;" />
+    </div>
+    </form>
+  </body>
+</html>
