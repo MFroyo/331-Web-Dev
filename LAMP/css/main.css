@@ -1,0 +1,75 @@
+html{
+    background-color:rgba(24, 21, 21, 0.918)
+}
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
+
+h1 {
+    margin-left: 29%;
+    color:white;
+    font-weight: 200px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+#person{
+    width: 80vw;
+    min-width: 400px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:slategray;
+    border-radius: 15px; 
+    border-style: solid; 
+    border-color: black;
+    border-width: 5px;
+}
+
+#image-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.profile{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 2em;
+    border-radius: 5rem;
+    padding: 8px;
+    border: 5px solid slategray;
+    background-color:black;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+.btn {
+    padding: .5em;
+    text-decoration: dashed;
+    display: inline-block;
+}
+
+#buttons {
+    text-align: center;
+    padding: 2em;
+}
+
+table {
+	width: 100%;
+}
+thead{
+	font-size: 30px;
+	font-weight: bolder;
+}
+thead,tr,th {
+    text-align: center;
+    background-color: gray;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMP Stack</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <h1>Lamp Stack</h1>
+    <div id="person">  
+        <div id="image-container"></div>
+        <h2 id="output">--</h2>
+    </div>
+    <div id="buttons">
+        <button id="find-user" onclick="ajax()" class="btn" name="data">Get Another</button>
+        <form action="add.php" method="GET" class="btn">
+            <input type="hidden" name="first" id="first" value="--">
+            <input type="hidden" name="last" id="last" value="--">
+            <input type="hidden" name="age" id="age" value="--">
+            <input type="hidden" name="country" id="country" value="--">
+            <input type="submit" id="add" value="Add This One" class="btn" id="addbtn">
+        </form>
+    </div>
+    <script src="ajax_fetch.js">
+    </script>
+</body>
+</html>
