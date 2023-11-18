@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Site</title>
+    <link rel="stylesheet" href="./css/main.css"> 
+    <link rel="script" href="./javascript/js">
+    <script>
+        function showDiv() {
+            document.getElementById('calculator').style.display = "";
+        }
+    </script>
+</head>
+<body>
+    <nav>
+      <div class="links">
+        <input type="button" id="calc" onclick="showDiv()" value="Calculator">
+        <a href = "https://csci331.cs.montana.edu/~q16c274/test-site/"><button>Other Website</button></a>
+        <a href = "https://csci331.cs.montana.edu/~q16c274/TempConverter/"><button>Another One</button></a>
+        <a href = "https://csci331.cs.montana.edu/~q16c274/CS%20Questionnaire/"><button>And Another</button></a>
+        <a href = "https://csci331.cs.montana.edu/~q16c274/LAMP"><button>And One More</button></a>
+      </div>
+    </nav>
+    <div id="calculator" class="calculator" style="display: none;">
+        <h1>Calculator</h1>
+        <img src = "imgs/machine1280w.jpg" id="machine">
+        <div id="calcu">
+            <div id="input">
+                <input type="number" id="num1" placeholder="Enter Number"> 
+                <p id="operator" colspan="6">Enter operation</p>
+                <input type="number" id="num2" placeholder="Enter Number">
+            </div>
+            <div class = buttons>
+                <input type="button" value="+" id="plus">
+                <input type="button" value="-" id="minus">
+                <input type="button" value="*" id="multiply">
+                <input type="button" value="/" id="divide">
+                <input type="button" value="≥" id="greater_than">
+                <input type="button" value="≤" id="less_than">
+            </div>
+        </div>
+        <h2 id="answer">?</h2>
+    </div>
+    <script src="./javascript/js"></script>
+  </body>
+</html>

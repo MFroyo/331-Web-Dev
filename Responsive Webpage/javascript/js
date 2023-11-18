@@ -1,0 +1,79 @@
+const add_btn = document.getElementById("plus");
+const sub_btn = document.getElementById("minus");
+const div_btn = document.getElementById("divide");
+const mult_btn = document.getElementById("multiply");
+const grtr_btn = document.getElementById("greater_than");
+const less_btn = document.getElementById("less_than");
+const output = document.getElementById("answer");
+const operator = document.getElementById("operator");
+add_btn.addEventListener("click", add);
+sub_btn.addEventListener("click", subtract);
+div_btn.addEventListener("click", divide);
+mult_btn.addEventListener("click", multiply);
+grtr_btn.addEventListener("click", greater_than);
+less_btn.addEventListener("click", less_than);
+
+function add(){
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result = num1 + num2;
+    operator.innerHTML = "&#x2b";
+    output.innerHTML = result;
+}
+
+function subtract(){
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result = num1 - num2;
+    operator.innerHTML = "&#x2212;";
+    output.innerHTML = result;
+}
+
+function multiply(){
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result = num1 * num2;
+    operator.innerHTML = "&#xd7";
+    output.innerHTML = result;
+}
+
+function divide(){
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result = num1 / num2;
+    operator.innerHTML = "&#xf7";
+    output.innerHTML = result;
+}
+
+function greater_than(){
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result = num1 >= num2;
+    operator.innerHTML = "≥";
+    output.innerHTML = result;
+}
+
+function less_than(){
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result = num1 <= num2;
+    operator.innerHTML = "≤";
+    output.innerHTML = result;
+}
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        grtr_btn.style.display = "flex";
+        less_btn.style.display = "flex";
+        
+    } else {     
+        grtr_btn.style.display = "none";
+        less_btn.style.display = "none";
+        document.getElementById("machine").src = './imgs/machine640w.jpg';     
+    }
+}
+  
+var x = window.matchMedia("(min-width: 601px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction)
+ // Attach listener function on state changes

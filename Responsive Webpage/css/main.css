@@ -1,0 +1,199 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    transition: 0.5 s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    margin: auto;
+    color: black;
+    width: 100vw;
+    text-align: center;
+}
+
+nav {
+    background: #7289DA;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+nav button, nav input {
+    width: 15vw;
+    height: 70px;
+}
+
+
+img{
+    width: 1280px;
+}
+
+.nav-section > a{
+    text-decoration: none;
+    color: white;
+}
+
+.calculator {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    min-width: 1380;
+    width: 90%;
+    padding: 2em;
+    display: block;
+    text-align: center;
+}
+
+#calcu{
+    box-sizing: border-box;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#input{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-content: center;
+    padding: 1em 2em 1em 25%;
+}   
+
+#input input{
+    box-sizing: border-box;
+    display: flex;
+    color: black;
+    background-color: #7289DA;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 1em;
+}
+
+.buttons{
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 0 2em 0 25%;
+}
+
+.buttons input {
+    font-size: 1.5em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    margin: 1em .5em;
+    padding: 0.5em 0.7em;
+}
+nav input, button{
+    font-size: 1.5em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    margin: 1em .5em;
+    padding: 0.5em 0.7em;
+}
+
+#operator {
+    color: black;
+    font-size: larger;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    header { 
+        padding: auto;
+    }
+
+    body {
+        font-size: 12px;
+        margin: 0;
+        color: white;
+    }
+
+    nav {
+        background: none;
+    }
+
+    .links input, .links a button {
+        color: white;
+        height: 10vh;
+        width: 100vw;
+        background-color: #7289DA;
+        display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+    }
+
+    .calculator {
+        width: 100vw;
+        border: solid 4px lightblue;
+        border-radius: 2em;
+        padding: 2em;
+        margin: .5em auto;
+        margin-top: 50vh;
+        display: block;
+    }
+
+    #calcu{
+        box-sizing: border-box;
+        display: grid;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #machine {
+        width: 100vw;
+        padding-bottom: 5px;
+    }
+
+
+    #input{
+        text-align: center;
+        display: table-column;
+        margin: 0;
+        padding:0;
+    }
+
+    #input p{
+        font-size: 2em;    }
+
+    #input input{
+        box-sizing: border-box;
+        display: block;
+        color: lightgray;
+        background-color: white;
+    }
+
+    .buttons {
+        text-align: center;
+        display: grid;
+        margin: 0;
+        padding:0;
+        grid-template-areas: "button1 button2"
+                             "button3 button4";
+        width: 5%;
+    }
+
+    .buttons input{
+        border-radius: 2em;
+        font-size: 2.5em;
+        margin: 1em;
+        padding: 1em 1.3em;
+    }
+    
+    #answer{
+        background-color: #7289DA;
+        font-size: 1.5em;
+        padding: 10px;
+        border: solid 4px lightblue;
+        border-radius: 1em;
+        text-align: center;
+    }
+}
